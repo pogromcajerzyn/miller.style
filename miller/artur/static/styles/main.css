@@ -1,13 +1,12 @@
 :root {
     --me-border-radius: 6px;
-    --max-width: 1240px;
 }
 
 #middle_column {
     user-select: none;
     margin: 5vh auto;
     max-width: var(--max-width);
-    min-width: 660px;
+    min-width: var(--min-width);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +53,7 @@
 }
 #me_name{
     fill: var(--dark-scarlet);
-    font-size: calc(31px * var(--font-scaler));
+    font-size: calc(30px * var(--font-scaler));
 }
 #me_title{
     fill: var(--egg-white);
@@ -90,52 +89,20 @@
 
     font-size: calc(6px * var(--font-scaler));
     font-family: UnixelDesu;
+    color: var(--egg-white);
 
     white-space: nowrap;
     text-align: justify;
     text-justify: inter-word;
-    transition: color 0.5s ease, height 0.5s ease, margin 0.5s ease, border-color 0.5s ease;
+
+    transition: none;
 }
 
-.normal_about_me {
-    color: black;
-    border: 0 solid black;
-    height: 0px;
-}
 
-.expanded_about_me {
-    color: var(--egg-white);
-    margin: 0 0 calc(2px * var(--font-scaler)) 0;
-
-    border: var(--small-edges) solid var(--dark-scarlet);
-    border-top: 0 solid var(--dark-scarlet);
-    height: calc(120px * var(--font-scaler));
-
-    transition: none; /* Remove transition for border */
-}
-
-.me_text{
-    white-space: pre-wrap;
-    margin: calc(8px * var(--font-scaler));
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
+#my_text{
     width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #000;
-  }
+    white-space: pre-wrap;
+    margin: 0;
 }
 
 #me_menu{

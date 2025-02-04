@@ -1,17 +1,22 @@
 :root {
-  --thumbnail-width-now: 0px;
-  --thumbnail-height-now: 0px;
-  --post_space_width_now: 0px;
-  --post-preview-predicted-height: 0px;
+    --thumbnail-width-now: 0px;
+    --thumbnail-height-now: 0px;
+    --post_space_width_now: 0px;
+    --post-preview-predicted-height: 0px;
 
-  --content-offset-left: 100%;
-  --content-offset-top: 100%;
+    --content-offset-left: 100%;
+    --content-offset-top: 100%;
+
+    --post-text-size: 12px;
 }
 
 #post_space_background {
-    max-width: 100%;
-    min-width: 100%;
-    margin-top: 6vh;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    /*margin-top: 6vh;*/
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
     display: flex;
     justify-content: center;
     background: black;
@@ -19,11 +24,9 @@
 
 #post_space {
 
-    margin-left: var(--main-borders);
-    margin-right: var(--main-borders);
-    margin-bottom: auto;
-    max-width: 1240px;
-    min-width: 660px;
+    margin: 0;
+    max-width: 100%;
+    min-width: 100%;
     display: grid;
     grid-auto-flow: dense;
 
@@ -42,7 +45,7 @@
     border-radius: var(--thumbnail-border-radius);
     background: black;
     overflow: hidden;
-    box-shadow: 0 0 26px 26px rgb(15 15 15 / 0.9);
+    /*box-shadow: 0 0 6px 6px rgb(15 15 15 / 0.9);*/
 
     cursor: pointer;
     user-select: none;
@@ -81,14 +84,14 @@
 
     background: black;
     text-align:left;
-    padding: calc(15px * var(--font-scaler));
+    padding: calc(10px * var(--post-font-scaler));
 }
 
 .content_wrapper_text{
     max-height: 100%;
     max-width: 100%;
     color: var(--egg-white);
-    font-size: calc(12px * var(--font-scaler));
+    font-size: calc(var(--post-font-scaler) * var(--post-font-scaler));
     font-family: UnixelDesu;
     overflow: hidden;
 
@@ -162,7 +165,7 @@
     paint-order: stroke;
     stroke: rgba(255, 255, 255, 0.3);
     stroke-width: 2px;
-    font-size: calc(40px * var(--font-scaler));
+    font-size: calc(40px * var(--post-font-scaler));
 }
 
 .post_block:hover .post_thumbnail_overlay_text,
@@ -175,7 +178,7 @@
 
 .post_block:hover {
     fill: red;
-    box-shadow: 0 0 26px 26px rgb(255 255 255 / 0.03);
+    box-shadow: 0 0 26px 26px rgb(255 255 255 / 0.01);
     transition: fill var(--transition-time) ease-out;
 }
 
@@ -188,13 +191,13 @@
 
 .more{
     position: absolute;
-    width: calc(80px * var(--font-scaler));
-    height: calc(22px * var(--font-scaler));
+    width: calc(50px * var(--post-font-scaler));
+    height: calc(16px * var(--post-font-scaler));
     bottom: 0;
     right: 0;
     background: var(--dark-scarlet);
     color: var(--egg-white);
-    font-size: calc(16px * var(--font-scaler));
+    font-size: calc(var(--post-font-scaler) * var(--post-font-scaler));
     font-family: UnixelDesu;
     display: flex;
     justify-content: center;

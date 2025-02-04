@@ -1,13 +1,17 @@
 :root {
-  --main-borders: 30px;
-  --small-edges: 3px;
-  --dark-scarlet: #560319;
-  --egg-white: #F0EAD6;
-  --gray: #303030;
-  --transition-time: 0.1s;
+    --main-borders: 30px;
+    --small-edges: 3px;
+    --dark-scarlet: #560319;
+    --egg-white: #F0EAD6;
+    --gray: #303030;
+    --transition-time: 0.1s;
 
-  --thumbnail-border-radius: 40px;
-  --font-scaler: 2;
+    --thumbnail-border-radius: 40px;
+    --font-scaler: 2;
+    --post-font-scaler: 2;
+
+    --max-width: 1240px;
+    --min-width: 460px;
 }
 
 html, body, #page {
