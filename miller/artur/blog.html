@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Al2O3Cr - A Hobbyist's Blog</title>
+    <link rel="icon" href="static/graphics/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="static/styles/transitions.css">
+    <link rel="stylesheet" href="static/styles/fonts.css">
+    <link rel="stylesheet" href="static/styles/global.css">
+    <link rel="stylesheet" href="static/styles/blog.css">
+
+    <audio id="hover" src="static/sounds/hover.wav"></audio>
+    <audio id="click" src="static/sounds/click.wav"></audio>
+
+</head>
+
+<body>
+    <div class="transition transition-1 is-active"></div>
+
+    <script type="text/javascript" src="static/scripts/global.js"></script>
+    <script type="text/javascript" src="static/scripts/blog_page_before.js"></script>
+
+
+    <div id="home"><img src="static/graphics/home.svg"
+        onmouseenter="handleHover()" onmousedown='clickWaitGo(event, "/")'></div>
+
+    <div  id="post_space_background">
+        <div  id="post_space"> </div>
+    </div>
+
+    <div id="main_foot_space"></div>
+
+    <script type="text/javascript" src="static/scripts/blog_page_after.js"></script>
+    <script type="text/javascript" src="static/scripts/transition.js"></script>
+
+</body>
+</html>

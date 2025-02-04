@@ -1,0 +1,50 @@
+:root {
+  --main-borders: 30px;
+  --small-edges: 3px;
+  --dark-scarlet: #560319;
+  --egg-white: #F0EAD6;
+  --gray: #303030;
+  --transition-time: 0.1s;
+
+  --thumbnail-border-radius: 40px;
+  --font-scaler: 2;
+}
+
+html, body, #page {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding: 0;
+    display: Flex;
+    flex-direction: column;
+    background: black;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--dark-scarlet);
+  border-radius: 20px;
+  border: 1px solid var(--dark-scarlet);
+}
+
+#home {
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 66;
+}
+
+#home img {
+    width: 100%;
+    height: 100%;
+}
+
