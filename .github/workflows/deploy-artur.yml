@@ -1,0 +1,22 @@
+name: Deploy Artur Subdomain
+
+on:
+  push:
+    paths:
+      - "artur/**"
+      - ".github/workflows/deploy-artur.yml"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Deploy to gh-pages-artur
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./artur
+          publish_branch: gh-pages-artur
+          cname: artur.miller.style

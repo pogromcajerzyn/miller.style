@@ -1,0 +1,22 @@
+name: Deploy Miller Subdomain
+
+on:
+  push:
+    paths:
+      - "miller/**"
+      - ".github/workflows/deploy-miller.yml"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Deploy to gh-pages-miller
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./miller
+          publish_branch: gh-pages-miller
+          cname: miller.style
