@@ -1,4 +1,4 @@
-name: Deploy Artur Subdomain
+name: Deploy artur.miller.style
 
 on:
   push:
@@ -15,10 +15,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Deploy to gh-pages-artur
+      - name: Deploy artur
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./artur
-          publish_branch: gh-pages-artur
+          publish_branch: gh-pages
           cname: artur.miller.style

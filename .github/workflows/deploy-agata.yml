@@ -1,4 +1,4 @@
-name: Deploy Agata Subdomain
+name: Deploy agata.miller.style
 
 on:
   push:
@@ -15,10 +15,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Deploy to gh-pages-agata
+      - name: Deploy agata
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./agata
-          publish_branch: gh-pages-agata
+          publish_branch: gh-pages
           cname: agata.miller.style

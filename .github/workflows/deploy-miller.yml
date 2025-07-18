@@ -1,4 +1,4 @@
-name: Deploy Miller Subdomain
+name: Deploy miller.style
 
 on:
   push:
@@ -15,10 +15,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Deploy to gh-pages-miller
+      - name: Deploy miller
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./miller
-          publish_branch: gh-pages-miller
+          publish_branch: gh-pages
           cname: miller.style
